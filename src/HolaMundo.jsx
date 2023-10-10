@@ -3,7 +3,7 @@
 function HolaMundo() {
   return (
     <div className="HolaMundo">
-      <h1>Hola Mundo</h1>
+      <h1>Hola TODO Mundo</h1>
     </div>
   );
 }
