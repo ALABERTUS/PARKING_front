@@ -1,0 +1,149 @@
+.register-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    color: #000; 
+    
+}
+.register-wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.register-wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height:50px;
+    margin:20px 0;
+}
+
+.register-form{
+    width:420px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background-color: #FFF;
+}
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    /*border: 2px solid rgba(255,255,255,.2);*/
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color:#000;
+    /* padding:20px 45px 20px 20px;*/
+    padding: 16px 45px 15px 20px; /* 修改了这里的padding */
+    appearance: none;
+}
+
+.input-box input::placeholder{
+    color:#000;
+}
+
+.input-box i {
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform:  translateY(-50%);
+    font-size: 20px;
+}
+
+.register-wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin:-15px 0 15px;
+
+}
+
+.remember-forget label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forget a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.register-wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background:#2075D9;
+    border:none;
+    outline:none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    color:#FFF;
+    font-weight: 600;
+}
+
+.register-wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.wrapper .register-link p a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-wrapper .register-link p a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .remember-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-wrapper-link p a:hover{
+    text-decoration: underline;
+}
+
+/* select dropmenu */
+.input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000;
+    padding: 13px 40px 15px 20px;
+    /*appearance: none; */
+} 
+
+ /*.input-box select {
+   appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 40%;
+
+}*/
+
+.register-message{
+    text-align: center;
+    padding-top:15px;
+}
