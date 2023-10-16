@@ -1,0 +1,19 @@
+.calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  
+}
+
+.calendar .MuiDateCalendar-root {
+    background-color: #ededed;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.calendar .MuiPickersDay-root {
+    font-size: 14px;
+}
+
+
