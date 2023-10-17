@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link } from 'react-router-dom'
-import logo from '../../public/pics/logo.png'
+/* import logo from '../../public/pics/logo.png' */
+import logo from '/pics/logo.png?url'
 import { TiThMenuOutline } from 'react-icons/ti';
 import { AiOutlineClose } from 'react-icons/ai';
 
