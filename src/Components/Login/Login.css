@@ -1,0 +1,39 @@
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+.login-title {
+    color: white;
+}
+
+.form-container {
+    max-width: 500px;
+    max-height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid black;
+}
+
+.form-container label {
+    margin-right: 50px;
+    font-weight: bolder;
+}
+
+.form-container button {
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: #2075D9;
+    color: white;
+    font-weight: bolder;
+    width: 125px;
+    flex-shrink: 0;
+    padding: 5px;
+}
