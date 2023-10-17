@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar1 from "../components/Navbar1";
-import { AiOutlineMail } from "react-icons/ai";
-import "../pages/HomeEnter.css";
-import { useNavigate, useLocation } from 'react-router-dom';
+import Navbar1 from '../components/Navbar1';
+import { useNavigate } from 'react-router-dom';
+import '../pages/HomeEnter.css';
+import { useLocation } from 'react-router-dom';
 
 function HomeEnter() {
+
     const [email, setEmail] = useState('');
     const [role, setRole] = useState('');
 
@@ -22,18 +23,18 @@ function HomeEnter() {
             });
     };
     // Inside HomeEnter function:
-const navigate = useNavigate();
-const location = useLocation();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-useEffect(() => {
-    if (role === 'administrador') {
-      navigate('/admin', { state: { role: 'administrador' } });
-    } else if (role === 'solicitante') {
-      navigate('/user', { state: { role: 'solicitante' } });
-    } else if (role === 'propietario') {
-      navigate('/owner', { state: { role: 'propietario' } });
-    }
-  }, [role]);
+    useEffect(() => {
+        if (role === 'administrador') {
+            navigate('/admin', { state: { role: 'administrador' } });
+        } else if (role === 'solicitante') {
+            navigate('/user', { state: { role: 'solicitante' } });
+        } else if (role === 'propietario') {
+            navigate('/owner', { state: { role: 'propietario' } });
+        }
+    }, [role]);
 
     return (
         <div>
@@ -45,21 +46,16 @@ useEffect(() => {
                     <div className="email-section">
                         <div className="email-label">Email</div>
                         <div className="input-box">
-                            <div className="input-group">
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    required
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
-                                />
-                                <i>
-                                    <AiOutlineMail />
-                                </i>
-                            </div>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                     </div>
-                    <button type="submit" className="btn">Entrar</button>
+                    <button type="submit" className="login-btn">Entrar</button>
                 </form>
             </div>
         </div>
@@ -67,3 +63,4 @@ useEffect(() => {
 }
 
 export default HomeEnter;
+

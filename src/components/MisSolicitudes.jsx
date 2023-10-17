@@ -14,8 +14,8 @@ const MisSolicitudes = () => {
     {/* other user pages content */}
     <div className="user-wrapper">
         <div className='user-link'>
-    <Link to="/user/missolicitudes" className="btn">08/11/2023</Link>      
-    <Link to="/user/solicitarreserva" className="btn">SOLICITAR RESERVA</Link>
+    <Link to="/user/missolicitudes" className="user-btn">08/11/2023</Link>      
+    <Link to="/user/solicitarreserva" className="user-btn">SOLICITAR RESERVA</Link>
     
     
     </div>

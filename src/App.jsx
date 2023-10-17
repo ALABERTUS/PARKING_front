@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SolicitarReserva from './components/SolicitarReserva'; 
 import MisSolicitudes from './components/MisSolicitudes'; 
@@ -44,3 +44,4 @@ function WithNavbarLayout({ children }) {
 }
 
 export default App;
+*/

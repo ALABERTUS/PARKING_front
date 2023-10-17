@@ -15,9 +15,9 @@ return (
             {/* other user pages content */}
             <div className="user-wrapper">
                 <div className='user-link'>
-            <Link to="/user/solicitarreserva" className="btn">SOLICITAR RESERVA</Link>
-            <Link to="/user/missolicitudes" className="btn">MIS SOLICITUDES</Link>
-            <Link to="/user/mapa" className="btn">MAPA</Link>
+            <Link to="/user/solicitarreserva" className="user-btn">SOLICITAR RESERVA</Link>
+            <Link to="/user/missolicitudes" className="user-btn">MIS SOLICITUDES</Link>
+            <Link to="/user/mapa" className="user-btn">MAPA</Link>
             </div>
             </div>
         </>
