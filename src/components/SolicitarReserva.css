@@ -1,0 +1,18 @@
+.reseerva-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.calendar-title{
+   color:#FFF;
+   font-weight: 600;
+   margin-top:50px;
+   margin-bottom: -100px;
+}
+.reseerva-wrapper .user-link {
+   text-align: center; 
+   width:280px;
+   margin-top:-100px;
+}
