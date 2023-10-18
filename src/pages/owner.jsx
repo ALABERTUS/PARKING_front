@@ -8,6 +8,9 @@ const Owner = () => {
                 <Navbar /> 
             </div>
             <div>
+                <p>TEST</p>
+            </div>
+            <div>
                 <Calendar /> 
             </div>
         </>
