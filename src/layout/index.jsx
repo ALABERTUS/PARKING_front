@@ -9,6 +9,7 @@ import '../App.css'
 import SolicitarReserva from '../components/SolicitarReserva';
 import MisSolicitudes from '../components/MisSolicitudes'
 import Mapa from '../components/Mapa'
+
 function Index() {
   return (
     <BrowserRouter>
@@ -24,11 +25,5 @@ function Index() {
     </BrowserRouter>
   );
 }
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Index />
-  </React.StrictMode>
-);
 
 export default Index;

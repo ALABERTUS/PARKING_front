@@ -76,6 +76,7 @@ const Navbar = ({ role }) => {
 
             <div className={`menu ${isOpen ? 'show' : ''}`}>
                 {/* Common links for all roles */}
+                
                 <Link to="/common-link">Common Link</Link>
 
                 {/* Links based on role */}
