@@ -1,0 +1,13 @@
+.reverse-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.reverse-details{
+    width:350px;
+    text-align:center;
+    background-color: #FFF;
+    padding:30px 30px;
+}

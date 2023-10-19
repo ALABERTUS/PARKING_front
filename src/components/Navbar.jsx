@@ -44,14 +44,13 @@ const Navbar = () => {
 
 export default Navbar
 */
-console.log("Navbar loaded!");
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import logo from "../pics/logo.png";
-
 import { TiThMenuOutline } from 'react-icons/ti';
 import { AiOutlineClose } from 'react-icons/ai';
 import './Navbar.css';
+
 
 const Navbar = ({ role }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -61,9 +60,9 @@ const Navbar = ({ role }) => {
     };
 
     useEffect(() => {
-        console.log("Is menu open:", isOpen);
-    }, [isOpen]);
-    console.log("Role in Navbar:", role);
+        console.log("Role in Navbar:", role);
+    }, [role]);
+
 
     return (
         <nav>
@@ -75,9 +74,7 @@ const Navbar = ({ role }) => {
             </div>
 
             <div className={`menu ${isOpen ? 'show' : ''}`}>
-                {/* Common links for all roles */}
-                
-                <Link to="/common-link">Common Link</Link>
+                {/* when role is not "homeEnter" ，show Common links */}
 
                 {/* Links based on role */}
                 {role === 'administrador' && (
@@ -91,7 +88,6 @@ const Navbar = ({ role }) => {
                     <>
                         <Link to="/user/solicitarreserva">Solicitar Reserva</Link>
                         <Link to="/user/missolicitudes">Mis Solicitudes</Link>
-                        <Link to="/user/mapa">Mapa</Link>
                     </>
                 )}
 
@@ -101,8 +97,6 @@ const Navbar = ({ role }) => {
                         <Link to="/owner/requests">Requests</Link>
                     </>
                 )}
-
-           
             </div>
 
             <div className="logo">

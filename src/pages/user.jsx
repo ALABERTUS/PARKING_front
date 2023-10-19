@@ -1,27 +1,25 @@
 import React from 'react';
-import Navbar1 from '../components/Navbar1';
-import { useNavigate, useLocation } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../pages/User.css'
 
-const User = ({ role }) => {
+const User = () => {
     const location = useLocation();
-    const roleFromState = location.state?.role;
+    const roleFromState = location.state?.role; // get rold information from location.state 
     console.log("Role in User component:", roleFromState);
+    console.log("Links will have status:", { role: roleFromState });
 
-return (
+    return (
         <>
-            <Navbar1 role={roleFromState} />
-            {/* other user pages content */}
+            <Navbar  role={roleFromState}/> {/* do not pass the role attribute and do not display the left menu */}
             <div className="user-wrapper">
                 <div className='user-link'>
-            <Link to="/user/solicitarreserva" className="user-btn">SOLICITAR RESERVA</Link>
-            <Link to="/user/missolicitudes" className="user-btn">MIS SOLICITUDES</Link>
-            <Link to="/user/mapa" className="user-btn">MAPA</Link>
-            </div>
+                    <Link to={`/user/userreserve/${roleFromState}`} className="user-btn">Solicitar Reserva</Link>
+                    <Link to="/user/missolicitudes" className="user-btn">MIS SOLICITUDES</Link>
+                </div>
             </div>
         </>
-        
     );
 }
 

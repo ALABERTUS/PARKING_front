@@ -1,4 +1,4 @@
-.reseerva-wrapper {
+.reserva-wrapper {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -11,7 +11,7 @@
    margin-top:50px;
    margin-bottom: -100px;
 }
-.reseerva-wrapper .user-link {
+.reserva-wrapper .user-link {
    text-align: center; 
    width:280px;
    margin-top:-100px;

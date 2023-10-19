@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar1 from '../components/Navbar1';
+import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import '../pages/HomeEnter.css';
 import { useLocation } from 'react-router-dom';
@@ -38,14 +38,14 @@ function HomeEnter() {
 
     return (
         <div>
-            <Navbar1 />
+            <Navbar role="none"/>
             <div className="login-section">
                 <div className="page-title">Parking</div>
                 <form className="login-form" onSubmit={handleSubmit}>
                     <h1 className="login-iniciar">Iniciar Sesion</h1>
                     <div className="email-section">
                         <div className="email-label">Email</div>
-                        <div className="input-box">
+                        <div className="input-homeenter">
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -61,6 +61,5 @@ function HomeEnter() {
         </div>
     );
 }
-
 export default HomeEnter;
 
