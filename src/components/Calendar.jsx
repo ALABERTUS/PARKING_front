@@ -8,8 +8,8 @@ const Calendar = () => {
     return (
     <div className="calendar">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DateCalendar showDaysOutsideCurrentMonth fixedWeekNumber={6} />
-    </LocalizationProvider>
+        <DateCalendar showDaysOutsideCurrentMonth fixedWeekNumber={6} />
+      </LocalizationProvider>
     </div>
     
     )

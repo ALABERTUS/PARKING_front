@@ -6,24 +6,11 @@ const Login = () => {
 
     const handLogin = () => {
         const adminUser = 'admin@email.com' // El correo del usuario para poder entrar
-        if (email === adminUser) {
-            // login que redigire a la siguiente pantalla
-            <Link to="/administratorPanel" />
-        } else {
-            alert('Usuario incorrecto')
-        }
+        
     }
 
     return(
         <>
-
-            <div className='logo-container'>
-                <img 
-                    src='https://d3p157427w54jq.cloudfront.net/uploads/2018/01/randstad-logo-5.jpg'
-                    className='logo'>
-                </img>
-            </div>
-
             <div>
                 <h2 className='login-title'> Parking </h2>
             </div>

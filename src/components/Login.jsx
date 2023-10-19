@@ -6,9 +6,8 @@ import './Login.css'
 const Login = () => {
     
     return (
-
     <div className="login-wrapper">
-    <form className="login-form " action="" >
+    <form className="login-form "  >
         <h1>Login</h1>
     <div className="input-box">
         <input type="text" placeholder="Username" required />
@@ -21,7 +20,7 @@ const Login = () => {
         <a href="#">Forget password?</a>
     </div>
    
-    <button type="submit" className="btn" >Login</button>
+    <button type="submit" className="btn" > <Link to="/admin"> Entrar </Link></button>
   
     
    
@@ -30,6 +29,7 @@ const Login = () => {
 </div>
         
         </form>
+     
     </div>
 
   )

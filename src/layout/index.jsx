@@ -1,56 +1,33 @@
 import { createBrowserRouter } from "react-router-dom";
-import homeEnter from "../pages/homeEnter"
-/*/import Owner from "../pages/owner";
-/* import Editar from "../pages/Editar.jsx"; */
+import HomeEnter from "../pages/HomeEnter"
+import Admin from "../pages/admin";
+import User from "../pages/User";
+import Owner from "../pages/owner";
+import Guard from "../pages/Guard";
+import RequestReservation from "../pages/RequestReservation";
+import Reservation from "../pages/Reservation";
+
+import Login from "../Components/Login"
+import Register from "../Components/Register";
+
+
 
 export const router = createBrowserRouter ([
-   {
-        path: "/",
-        element: <homeEnter/>
-    },
-    /*
     {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        path: "/",
+        element: <Login/>
+    },
+   {
+        path: "/homeEnter",
+        element: <HomeEnter/>
+    },
+    {
         path: "/admin",
-        element: <admin/>  
+        element: <Admin/>  
     }, 
     {
         path: "/user",
-        element: <user/>  
+        element: <User/>  
     }, 
         {
         path: "/owner",
@@ -58,9 +35,20 @@ export const router = createBrowserRouter ([
     },
    {
         path: "/guard",
-        element: <guard/>  
-    }, */
-    
+        element: <Guard/>  
+    },
+    {
+        path: "/register",
+        element: <Register/>  
+    },
+    {
+        path: "/requestReservation",
+        element: <RequestReservation/>  
+    },
+    {
+        path: "/reservation",
+        element: <Reservation/>  
+    }
     
 ]);
 

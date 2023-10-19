@@ -2,9 +2,9 @@
 /* default mobile and tablet */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    width: 95%;
+    /* width: 95%; */
     margin: 0 auto;
     padding: 16px 23px;
     background-color: #2075D9;
@@ -85,7 +85,7 @@ nav {
 /* desktop pc */
 @media screen and (min-width: 1024px) {
     nav{
-        width: 84%;
+        /* width: 84%; */
     }
 
     .menu-toggle {
