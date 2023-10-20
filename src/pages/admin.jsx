@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Admin.css'
-import Navbar from './components/Navbar';
+import Navbar from './../Components/Navbar';
 import { Link } from 'react-router-dom';
 
 const Admin = () => {
@@ -17,7 +17,7 @@ const Admin = () => {
                 <button className='admin-button'>MIS SOLICITUDES</button>
                 <button className='admin-button'>SOLICITUDES</button>
                 <button className='admin-button'><Link to="/reservation"> RESERVA </Link></button>
-                <button className='admin-button'>PLAZAS</button>
+                <button className='admin-button'><Link to="/places"> PLAZAS </Link></button>
                 </div>
             </div>
       

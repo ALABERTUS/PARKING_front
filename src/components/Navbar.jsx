@@ -6,8 +6,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import "./Navbar.css";
 
-const Navbar = (onlyShowLogo) => {
-  const [isOpen, setIsOpen] = useState();
+const Navbar = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prevState) => !prevState);
@@ -21,8 +21,9 @@ const Navbar = (onlyShowLogo) => {
   return (
     <>
       <nav>
-        {!onlyShowLogo ? (
+        {!props.onlyShowLogo ? (
           <>
+          <h1 > aa</h1>
             <div className="menu-toggle" onClick={toggleMenu}>
               {isOpen ? (
                 <AiOutlineClose size={48} color="white" />

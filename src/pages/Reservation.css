@@ -1,0 +1,39 @@
+body {
+    background-color: #2075D9;
+}
+
+.reservation-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reservation-container {
+    text-align: center;
+    padding: 20px;
+    width: 350px;
+    background-color: grey;
+    border-radius: 25px;
+    background: #D9D9D9;
+    width: 400px;
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.reservation-container .reservation-container-first-button {
+    background: #31D1FB;
+}
+
+.reservation-container button{
+    padding: 2px;
+    width: 304px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.reservation-container p{
+   margin: 5px;
+}
+

@@ -9,6 +9,7 @@ import Reservation from "../pages/Reservation";
 
 import Login from "../Components/Login"
 import Register from "../Components/Register";
+import Places from "../pages/Places";
 
 
 
@@ -48,6 +49,10 @@ export const router = createBrowserRouter ([
     {
         path: "/reservation",
         element: <Reservation/>  
+    },
+    {
+        path: "/places",
+        element: <Places/>  
     }
     
 ]);

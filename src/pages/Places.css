@@ -1,0 +1,17 @@
+body {
+    background-color: #2075D9;
+}
+
+.places-container .places-title {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 80px;
+}
