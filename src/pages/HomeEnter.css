@@ -1,0 +1,79 @@
+body,
+html {
+    margin: 0;
+    padding: 0; 
+    background-color:#2075D9;
+}
+
+.login-section {
+    max-width: 84%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.page-title {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+    color: white;
+}
+
+.login-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 40px;
+    background-color: #FFF;
+}
+
+.email-section {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    gap: 8px;  
+}
+.email-label {
+    margin:0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.input-homeenter input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000;
+    padding: 10px 35px 10px 20px;
+}
+
+.login-btn {
+    width: 75%;
+    height: 42px;
+    background: #2075D9;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600;
+    margin-left: 18%;
+    margin-right: auto;
+    text-align: center;
+    line-height: 3px;
+    margin-bottom: 20px;
+}
