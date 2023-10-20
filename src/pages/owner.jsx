@@ -7,6 +7,7 @@ const Owner = () => {
             <div>
                 <Navbar /> 
             </div>
+ 
             <div>
                 <Calendar /> 
             </div>
