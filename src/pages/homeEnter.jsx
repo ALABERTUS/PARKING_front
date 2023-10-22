@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import '../pages/HomeEnter.css';
 import { useLocation } from 'react-router-dom';
+//import { AuthenticationGuard } from '../auth0/AuthenticationGuard'
 
 function HomeEnter() {
 

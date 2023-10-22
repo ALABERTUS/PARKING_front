@@ -18,7 +18,7 @@ const About = () => {
                         <p className="user-btn">12/10/2023</p>
                         <p className="user-btn">SOTANO 1</p>
                         <p className="user-btn">PLAZA 23</p>
-                        <p className="user-btn">CANCELAR SOLICITUD</p>
+                        <p className="user-btn">Cancelar solicitud</p>
                     </div>
                 </div>
         </div>

@@ -16,7 +16,7 @@ const User = () => {
             <div className="user-wrapper">
                 <div className='user-link'>
                     <Link to={`/user/userreserve/${roleFromState}`} className="user-btn">Solicitar Reserva</Link>
-                    <Link to="/user/missolicitudes" className="user-btn">MIS SOLICITUDES</Link>
+                    <Link to="/user/missolicitudes" className="user-btn">Mis solicitudes</Link>
                 </div>
             </div>
         </>

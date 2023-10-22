@@ -4,11 +4,16 @@ import Navbar from './Navbar';
 import './ReserveDetails.css'
 
 const ReserveDetails = () => {
-    const { date } = useParams(); // Extracting the date parameter from the URL
+    const { date } = useParams(); 
     const location = useLocation();
-    const role = location.state?.role || ''; // Retrieving the role from the previous page; the "?." is optional chaining in case state is undefined
-    const [usuarios, setUsuarios] = useState(role); // Initialize usuarios with role
-
+    const roleReceived = location.state?.role || 'default'; 
+    //console.log("Received role in ReservaDetails:", roleReceived);
+    
+    const [isPopupVisible, setIsPopupVisible] = useState(true);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    //const [usuarios, setUsuarios] = useState(role); // Initialize usuarios with role
+    
+    
     const handleSubmit = async () => {
         try {
             const response = await fetch('http://localhost:8080/api/v1/solicitudesreservas', {
@@ -18,43 +23,57 @@ const ReserveDetails = () => {
                 },
                 body: JSON.stringify({
                     fecha: date,
-                    usuarios: usuarios,
-                    // Other reservation information, e.g.:
-                    // time: selectedTime,
-                    // numberOfPeople: selectedPeopleCount,
-                    // etc...
+                    usuarios: roleReceived,
                 }),
             });
 
             const data = await response.json();
 
-            if (data.success) { 
-                // If successful, you can perform further actions, e.g. navigate to a confirmation page or display a success message
+            if (data.success) {
+                setShowSuccessMessage(true); 
             } else {
-                // If reservation failed, handle it here, e.g. display an error message
                 console.error("Error reserving:", data.error);
             }
         } catch (error) {
             console.error("Error calling the API:", error);
         }
     };
-    console.log("Received role in ReservaDetails:", role);
+    //console.log("Received role in ReservaDetails:", roleReceived);
+    //console.log("Location in ReserveDetails:", location);
+    
+    const closePopup = () => {
+        setIsPopupVisible(false);  
+        console.log("Inside closePopup");
+
+    };
+    
+    console.log("Rendering ReserveDetails. isPopupVisible:", isPopupVisible, "showSuccessMessage:", showSuccessMessage);
 
     return (
         <div >
-            <Navbar role={role} />
-
-            {/* Display data and other information */}
+            <Navbar role={roleReceived} />
+            {isPopupVisible && (
             <div className='reverse-container'>
                 <div className='reverse-details'>
                     <h2 className="user-btn">Información de reserva</h2>
-                    <h3 className="user-btn">Usuarios:{role} </h3>
+                    <h3 className="user-btn">Usuarios:{roleReceived}</h3>
                     <div className="user-btn">Date: {date}</div>
+                   
                     <button className="user-btn" onClick={handleSubmit}>Submit</button>
+                    {showSuccessMessage && (
+                            <>
+                                <div className="success-message">¡Reserva realizada con éxito!</div>
+                                <button className="user-btn" onClick={closePopup}>Close</button>
+                            </>
+                        )}
                 </div>
             </div>
-        </div>
-    );
+        )}
+
+     
+    </div>
+);
 }
+
 
 export default ReserveDetails;

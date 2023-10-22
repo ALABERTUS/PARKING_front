@@ -8,7 +8,7 @@ import Admin from '../pages/Admin';
 import User from '../pages/User';
 import Owner from '../pages/Owner';
 import Parking from '../pages/Parking'
-import UserRole from '../pages/UserRole'
+
 
 // Components imports
 import UserReserve from '../components/UserReserve';
@@ -20,6 +20,7 @@ import Calendar from '../components/Calendar'
 //import AuthenticationGuard from '../auth0/AuthenticationGuard';
 import ReserveDetails from '../components/ReserveDetails'
 import Reserve from '../components/Reserve'
+import UserRole from '../pages/UserRole'
 
 function Index() {
   return (
