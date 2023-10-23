@@ -3,7 +3,6 @@ import Navbar from '../Components/Navbar';
 import './Reservation.css'
 
 const Reservation = () => {
-    // Pendiente de implementar, fijarse en el figma.
     const reservas = [
         {email: 'edusanchez@gmail.com', date: '12/10/2023'},
         {email: 'edusanchez@gmail.com', date: '12/10/2023'},
@@ -22,8 +21,8 @@ const Reservation = () => {
           </div>
            <div className='reservation-page'>
             <div className='reservation-container'>
-                <h4> RESERVAS 12/10/2023 </h4>
-                <button className='reservation-container-first-button'> <strong> IMPRIMIR LISTADO RESERVAS</strong> </button>
+                <h4> Reservas 12/10/2023 </h4>
+                <button className='reservation-container-first-button'> <strong> Imprimir listado reservas </strong> </button>
                 {reservas.map((reserva, index) => (
                     <p key={index}> 
                         <button>

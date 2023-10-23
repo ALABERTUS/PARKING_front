@@ -12,7 +12,7 @@ const RequestReservation = () => {
             </div>
             <div className='request-reservation-container'>
                 <div className='request-reservation-container-title'>
-                    <h2> RESERVAS </h2>
+                    <h2> Reservas </h2>
                 </div>
                 <div className='request-reservation-calendar'>
                     <Calendar/>

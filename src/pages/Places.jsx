@@ -12,15 +12,15 @@ const Places = () => {
             </div>
             <div className='places-container'>
                 <div className='places-title'>
-                    <h4> 12 OCTUBRE 2023 </h4>
-                    <p> SOTANO 1</p>
+                    <h4> 12 octubre 2023 </h4>
+                    <p> Sótano 1</p>
                 </div>
                 <div className='places-list'>
                     <PlacesStatus numberOfPlaces={71}/>
                 </div> 
                 <div className='places-title mt-20'>
-                    <h4> 12 OCTUBRE 2023 </h4>
-                    <p> SOTANO 2</p>
+                    <h4> 12 octubre 2023 </h4>
+                    <p> Sótano 2</p>
                 </div>
                 <div className='places-list'>
                     <PlacesStatus numberOfPlaces={19}/>

@@ -10,8 +10,8 @@ import Reservation from "../pages/Reservation";
 import Login from "../Components/Login"
 import Register from "../Components/Register";
 import Places from "../pages/Places";
-
-
+import Requests from "../pages/Requests";
+import MyRequests from "../pages/MyRequests";
 
 export const router = createBrowserRouter ([
     {
@@ -53,6 +53,14 @@ export const router = createBrowserRouter ([
     {
         path: "/places",
         element: <Places/>  
+    },
+    {
+        path: "/requests",
+        element: <Requests/>
+    },
+    {
+        path: "/myRequests",
+        element: <MyRequests/>
     }
     
 ]);
