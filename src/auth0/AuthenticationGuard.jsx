@@ -1,9 +1,9 @@
-import React from 'react';
+/*import React from 'react';
 import { withAuthenticationRequired} from "@auth0/auth0-react";
 import PropTypes  from 'prop-types';
 
-const AuthenticationGuard = ({ component }) => {
-  const Component = withAuthenticationRequired(component, {
+const AuthenticationGuard = ({ Component }) => {
+  const Component = withAuthenticationRequired(Component, {
     onRedirecting: () => (
       <div>Redireccionando...</div>
     )
@@ -34,4 +34,16 @@ AuthenticationGuard.propTypes = {
 
 
 */
+import React from 'react';
+import { withAuthenticationRequired } from "@auth0/auth0-react";
+
+const AuthenticationGuard = ({ children }) => {
+  const AuthenticatedComponent = withAuthenticationRequired(() => children, {
+    onRedirecting: () => <div>Redireccionando...</div>,
+  });
+
+  return <AuthenticatedComponent />;
+};
+
+export default AuthenticationGuard;
 

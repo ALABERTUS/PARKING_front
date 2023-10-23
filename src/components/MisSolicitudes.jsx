@@ -15,8 +15,12 @@ const MisSolicitudes = () => {
     <div className="user-wrapper">
         <div className='user-link'>
     <Link to="/user/missolicitudes" className="user-btn">08/11/2023</Link>      
-    <Link to="/user/solicitarreserva" className="user-btn">SOLICITAR RESERVA</Link>
-    
+    <Link to={`/user/solicitarreserva/${roleFromState}`} className="user-btn">SOLICITAR RESERVA</Link>
+    <p className="user-btn">edusanchez@gamil.com</p>
+                        <p className="user-btn">12/10/2023</p>
+                        <p className="user-btn">SOTANO 1</p>
+                        <p className="user-btn">PLAZA 23</p>
+                        <p className="user-btn">Cancelar solicitud</p>
     
     </div>
     </div>
