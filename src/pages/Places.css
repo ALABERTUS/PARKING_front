@@ -15,3 +15,57 @@ body {
 .mt-20 {
     margin-top: 80px;
 }
+
+
+.places-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.places-page .places-container-2 {
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+    background-color: grey;
+    border-radius: 25px;
+    background: #D9D9D9;
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.places-body {
+    padding: 20px;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+
+places-footer {
+    margin: 30px 10px 10px 10px;
+}
+
+.places-button-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: transparent;
+}
+
+.places-footer button{
+    background: #2075D9;
+    padding: 20px 10px 20px 10px;
+    border-radius: 15px;
+    border: transparent;
+    color: white;
+    width: 100%;
+}
+
+.places-footer a{
+    color: white;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}

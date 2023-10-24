@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './PlacesStatus.css'
 
-const PlacesStatus = ({numberOfPlaces}) => {
+const PlacesStatus = ({numberOfPlaces, setNewPlace}) => {
 
     const [places, setPlaces] = useState([]);
 
@@ -21,13 +21,20 @@ const PlacesStatus = ({numberOfPlaces}) => {
         setPlaces(generatedPlaces);
       }, [numberOfPlaces]);
 
+    const handlePlace = (newPlaceSelected) => {
+        console.log('newPlaceSelected', newPlaceSelected)
+        setNewPlace(newPlaceSelected);
+    }
+
     return (
         <>
             <div className="places-container">
                 <div className="places-list">
                     {places.map((place) => ( 
-                        <div className="place-button" style={{ backgroundColor: place.color}}>
-                            {place.numberOfPlace}
+                        <div className="place-button"
+                             style={{ backgroundColor: place.color}}
+                             onClick={(e) => handlePlace(place)}>
+                            <span> </span>{place.numberOfPlace}
                         </div>
                     ))}
                 </div>

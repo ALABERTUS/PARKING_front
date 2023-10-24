@@ -6,19 +6,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .reservation-container {
     text-align: center;
     padding: 20px;
-    width: 350px;
     background-color: grey;
     border-radius: 25px;
     background: #D9D9D9;
     width: 400px;
     height: fit-content;
     flex-shrink: 0;
+}
+
+.reservation-container-2 {
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+    background-color: grey;
+    border-radius: 25px;
+    background: #D9D9D9;
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.reservation-container-2 h4{
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.reservation-body {
+    background-color: yellow;
+    padding: 2px;
+    border-radius: 30px;
+}
+
+
+.reservation-body p{
+    font-weight: bolder;
 }
 
 .reservation-container .reservation-container-first-button {
@@ -37,3 +62,31 @@ body {
    margin: 5px;
 }
 
+.reservation-footer {
+    margin: 30px 10px 10px 10px;
+}
+
+.reservation-button-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: transparent;
+}
+
+.reservation-footer button{
+    background: #2075D9;
+    padding: 20px 10px 20px 10px;
+    border-radius: 15px;
+    border: transparent;
+    color: white;
+    width: 100%;
+}
+
+.reservation-footer button{
+    background: #2075D9;
+    padding: 20px 10px 20px 10px;
+    border-radius: 15px;
+    border: transparent;
+    color: white;
+    width: 100%;
+}
