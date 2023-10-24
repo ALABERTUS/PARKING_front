@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/parkings",
-                element: <AuthenticationGuard component={<Parking />}  />,
+                element: <AuthenticationGuard component={Parking}  />,
             },
         ],
     }

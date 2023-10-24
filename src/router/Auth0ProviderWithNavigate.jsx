@@ -24,11 +24,11 @@ function Auth0ProviderWithNavigate({children}) {
             clientId={clientId}
             authorizationParams={{
                 audience: audience,
-                redirectUri: redirectUri
+                redirect_Uri: redirectUri
             }}
             
             onRedirectCallback={OnRedirectCallback}>
-            {children}
+                {children}
         </Auth0Provider>
     )
 }

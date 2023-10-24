@@ -1,72 +1,48 @@
-/*import { useState, useEffect } from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
+import './Home.css';
 
 const Home = () => {
-  const [role, setRole] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLoginSuccess = async (response) => {
-    try {
-      const token = response.token;
-      const apiResponse = await fetch('URL_DE_TU_API', {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (apiResponse.ok) {
-        const data = await apiResponse.json();
-        const userRole = data.role;
-        setRole(userRole);
-        setIsLoggedIn(true);
-      } else {
-        console.error('Error al obtener el rol de la API');
-      }
-    } catch (error) {
-      console.error('Error al obtener el rol:', error);
-    }
-  };
-
-  const handleLoginFailure = (error) => {
-    console.error(error);
-  };
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+  const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
-    if (isLoggedIn) {
-      if (role === 'solicitante') {
-        // Redirigir al usuario a la página de solicitante
-      }else if (role === 'administrador'){ 
-        // Redirigir al usuario a la página de administrador 
-      }else if (role === 'propietario') {
-        // Redirigir al usuario a la página de propietario
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/api/v1/Parking");
+        setApiData(response.data);
+      } catch (error) {
+        console.log(error);
       }
-    }
-  }, [role, isLoggedIn]);
+    };
+
+    fetchData();
+  }, []);
 
   return (
-    <div>
-      <h1>Inicia sesión con tu cuenta de Google</h1>
-      <GoogleLogin
-        clientId="URL_DE_TU_CLIENT_ID"
-        onSuccess={handleLoginSuccess}
-        onFailure={handleLoginFailure}
-        buttonText="Iniciar sesión con Google"
-      />
+    <div className="container">
+      {!isAuthenticated ? (
+        <button className="login-button" onClick={() => loginWithRedirect()}>
+          Log in with Google
+        </button>
+      ) : (
+        <button className="logout-button" onClick={() => logout()}>
+          Log out
+        </button>
+      )}
+
+      {apiData && <p>{apiData}</p>}
+
+      {isAuthenticated && (
+        <div>
+          <h2 className="welcome-message">Welcome, {user.name}!</h2>
+          <p className="email">Email: {user.email}</p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Home;*/
-
-
-const Home = () => {
-  return (
-    <div>
-      <h1></h1>
-      <h1>Home</h1>
-    </div>
-  );
-}
-
 export default Home;
+
