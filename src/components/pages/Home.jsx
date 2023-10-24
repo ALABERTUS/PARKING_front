@@ -21,6 +21,7 @@ const Home = () => {
   }, []);
 
   return (
+    <>
     <div className="container">
       {!isAuthenticated ? (
         <button className="login-button" onClick={() => loginWithRedirect()}>
@@ -41,8 +42,8 @@ const Home = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
 export default Home;
-

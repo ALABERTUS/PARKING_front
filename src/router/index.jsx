@@ -8,16 +8,16 @@ import { AuthenticationGuard } from "../auth0/AuthenticationGuard";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />,
+        element: <Layout/>,
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: <Home/>
             },
             {
                 path: "/parkings",
-                element: <AuthenticationGuard component={Parking}  />,
-            },
-        ],
+                element: <AuthenticationGuard component={Parking}/>
+            }
+        ]
     }
 ]);
