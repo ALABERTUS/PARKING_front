@@ -36,17 +36,13 @@ const Parking = () => {
     }, [user, getAccessTokenSilently]);
 
     const isAdmin = (user) => {
-        if (user["https://parkinAPI/roles"][0] == "administrador") {
+        if (user["https://parkingAPI/roles"][0] == "administrador") {
             return true;
         }
     }
-
+    console.log(isAdmin(user),parkings);
     return (
-        <div className=''> {
-            isAdmin() && (
-                
-            )
-        }
+        <div>Parking</div>
     )
 }     
 

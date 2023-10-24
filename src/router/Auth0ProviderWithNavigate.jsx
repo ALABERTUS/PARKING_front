@@ -7,7 +7,7 @@ function Auth0ProviderWithNavigate({children}) {
     const domain = import.meta.env.VITE_DOMAIN;
     const clientId = import.meta.env.VITE_CLIENT_ID;
     const audience = import.meta.env.VITE_AUDIENCE;
-    const redirectUri = window.location.origins;
+    const redirectUri = window.location.origin;
 
 
     const OnRedirectCallback = (appState) => {

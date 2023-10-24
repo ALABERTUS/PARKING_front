@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import GoogleLogin from 'react-oauth-google';
+/*import { useState, useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Home = () => {
   const [role, setRole] = useState(null);
@@ -56,5 +56,17 @@ const Home = () => {
     </div>
   );
 };
+
+export default Home;*/
+
+
+const Home = () => {
+  return (
+    <div>
+      <h1></h1>
+      <h1>Home</h1>
+    </div>
+  );
+}
 
 export default Home;
