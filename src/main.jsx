@@ -13,10 +13,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Index  from './layout/Index.jsx'
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router/Index';
+import Auth0ProviderWithNavigate from './layout/Auth0ProviderWithNavigate.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Index />
+   <Auth0ProviderWithNavigate>
+      <RouterProvider router={router} />
+    </Auth0ProviderWithNavigate>
   </React.StrictMode>
 );

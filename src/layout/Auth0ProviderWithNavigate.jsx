@@ -1,60 +1,31 @@
-/*import { Auth0Provider } from "@auth0/auth0-react";
-import { Navigate } from "react-router-dom";
-import PropTypes from "prop-types";
-
-function Auth0ProviderWithNavigate({children}){
-    const domain = import.meta.env.VITE_DOMAIN;
-    const clientId = import.meta.env.VITE_CLIENT_ID;
-    const audience = import.meta.env.VITE_AUDIENCE;
-    const redirectUri = window.location.origin
-
-    const OnRedirectCallback = (appState) =>{
-        <Navigate to={appState?.returnTo || window.location.pathname} />
-    };
-
-    if(!domain || !clientId || !redirectUri){
-        return null;
-    }
-   
-
-    return(
-        <Auth0Provider
-            domain ={domain}
-            clientId = {clientId}
-            authorizationParams={{
-                audience: audience,
-                redirect_uri: redirectUri
-            }}
-            onRedirectCallback= {OnRedirectCallback} >
-                {children}
-            </Auth0Provider> 
-    )
-}
-
-Auth0ProviderWithNavigare.propTypes = {
-    children: PropTypes.object
-}
-
-export default Auth0ProviderWithNavigate */
 import { Auth0Provider } from "@auth0/auth0-react";
+import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 function Auth0ProviderWithNavigate({ children }) {
     const domain = import.meta.env.VITE_DOMAIN;
+    
     const clientId = import.meta.env.VITE_CLIENT_ID;
     const audience = import.meta.env.VITE_AUDIENCE;
     const redirectUri = window.location.origin;
 
-    if (!domain || !clientId || !redirectUri) {
+    const OnRedirectCallback = (appState) => {
+        <Navigate to={appState?.returnTo || window.location.pathname}/>
+    };
+
+    if (!(domain && clientId && redirectUri)){
         return null;
     }
 
     return (
         <Auth0Provider
-            domain={domain}
-            clientId={clientId}
-            audience={audience}
-            redirectUri={redirectUri}
+        domain="dev-qrdzrd5bq4myvfse.us.auth0.com"
+        clientId="Xzzd95zk899HtZa0ESa3hwX0M8wxlzVg"
+        authorizationParams={{
+            audience: "https://ParkingAPI",
+            redirect_uri: window.location.origin
+        }}
+        onRedirectCallback={OnRedirectCallback}
         >
             {children}
         </Auth0Provider>
@@ -62,7 +33,7 @@ function Auth0ProviderWithNavigate({ children }) {
 }
 
 Auth0ProviderWithNavigate.propTypes = {
-    children: PropTypes.object.isRequired
+    children: PropTypes.object
 }
 
 export default Auth0ProviderWithNavigate;

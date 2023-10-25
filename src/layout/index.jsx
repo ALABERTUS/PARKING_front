@@ -1,16 +1,13 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../App.css'
 import Auth0ProviderWithNavigate from './Auth0ProviderWithNavigate.jsx';
-// Pages imports
+
 import HomeEnter from '../pages/HomeEnter';
 import Admin from '../pages/Admin';
 import User from '../pages/User';
 import Owner from '../pages/Owner';
 import Parking from '../pages/Parking'
 
-
-// Components imports
 import UserReserve from '../components/UserReserve';
 import MisSolicitudes from '../components/MisSolicitudes'
 import About from '../components/About'
@@ -25,13 +22,7 @@ function Index() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Main route - you can use AuthenticationGuard */}
         <Route path="/" element={<HomeEnter />} /> 
-        {/*<Route path="/" element={
-            <AuthenticationGuard><HomeEnter />
-            </AuthenticationGuard>} /> 
-        */}      
-
         {/* Other routes */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/user/userreserve/:role" element={<UserReserve />} />
